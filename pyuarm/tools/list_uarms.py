@@ -1,12 +1,12 @@
 from serial.tools import list_ports
-
-UARM_HWID_KEYWORD = "USB VID:PID=0403:6001"
-
+from ..config import load_config
 
 def uarm_ports():
+    settings = load_config()
+    hwid_keyword = settings["hardware_id"]
     uarm_ports = []
     for i in list_ports.comports():
-        if i.hwid[0:len(UARM_HWID_KEYWORD)] == UARM_HWID_KEYWORD:
+        if i.hwid[0:len(hwid_keyword)] == hwid_keyword:
             uarm_ports.append(i[0])
     return uarm_ports
 

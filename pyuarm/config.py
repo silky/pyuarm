@@ -22,7 +22,7 @@ default_config = {
     "branch": "dev",
     "firmware_filename": "firmware.hex",
     "bluetooth_filename": "bluetooth.hex",
-    "hardware_id": "USB VID:PID=0403:6001",
+    "hardware_id": "USB VID:PID=2341:0042", # "USB VID:PID=0403:6001",
     "calibration_filename": "calibration.hex",
     "calibration_url": "http://download.ufactory.cc/firmware/pro/calibration.hex",
     "firmware_url": "http://download.ufactory.cc/firmware/dev/firmware.hex",
